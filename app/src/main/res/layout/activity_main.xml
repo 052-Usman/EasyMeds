@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:fitsSystemWindows="false"
+    android:id="@+id/drawerLayout">
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/navigationView"
+        app:headerLayout="@layout/header_menu"
+        app:menu="@menu/sidemenu"
+        android:layout_gravity="start"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="4"
+        android:background="@color/off_white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4">
+
+            <ImageButton
+                android:id="@+id/menu"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/menu_icon" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:src="@drawable/logo_text"
+                android:layout_centerInParent="true"/>
+            <ImageButton
+                android:id="@+id/shoppingCart"
+                android:layout_marginRight="18dp"
+                android:layout_alignParentRight="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shopping_cart_icon" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_weight="0.4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:background="@drawable/search_rounded"
+                android:iconifiedByDefault="false"
+                android:queryBackground="@null"
+                android:queryHint="Find a Medicine" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:clickable="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/layout_background"
+            android:layout_height="0dp">
+
+            <TextView
+                android:id="@+id/wwD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="30dp"
+                android:text="Pharma Store"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_below="@+id/wwD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Convenience, Delivered!"
+                android:textSize="14dp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:layout_marginLeft="12dp"/>
+
+            <Button
+                android:id="@+id/orderNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/back_color"
+                android:text="Order Now"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                app:cornerRadius="10dp" />
+            <ImageView
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:src="@drawable/order_boy"
+                android:background="@drawable/circle_shape"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="4dp"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_marginTop="8dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:clickable="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/layout_background"
+            android:layout_height="0dp">
+            <ImageView
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:background="@drawable/circle_shape_pharmacy"
+                android:src="@drawable/locate_pharmacy"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="4dp"
+                android:layout_alignParentBottom="true"/>
+            <TextView
+                android:id="@+id/coT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check out the"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="12dp"/>
+            <TextView
+                android:layout_below="@+id/coT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nearby Pharmacy"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginLeft="12dp"/>
+            <Button
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Locate"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/back_color"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:layout_marginLeft="12dp"
+                app:cornerRadius="10dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_marginTop="8dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:clickable="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/layout_background"
+            android:layout_height="0dp">
+
+            <ImageView
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="4dp"
+                android:background="@drawable/circle_shape_alternative"
+                android:src="@drawable/medicine_hand" />
+
+            <TextView
+                android:id="@+id/fA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="30dp"
+                android:text="BlackList Medicine"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+<!--            <TextView-->
+<!--                android:layout_below="@+id/fA"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="and Reviews"-->
+<!--                android:textSize="18dp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:layout_marginLeft="12dp"/>-->
+            <Button
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Find"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/back_color"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:layout_marginLeft="12dp"
+                app:cornerRadius="10dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

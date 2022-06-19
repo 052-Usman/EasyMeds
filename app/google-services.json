@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "541892544272",
+    "project_id": "easymeds-4db89",
+    "storage_bucket": "easymeds-4db89.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:541892544272:android:dd52ae32cc8f2c836f8795",
+        "android_client_info": {
+          "package_name": "com.usman.easymeds"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "541892544272-g60vgtfmi3islh3n53a458kuc6dicd8b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNzOp3doJXkW7md4UpP-B9LnKhtMOMSlQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "541892544272-g60vgtfmi3islh3n53a458kuc6dicd8b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
