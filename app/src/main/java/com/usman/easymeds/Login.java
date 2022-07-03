@@ -11,6 +11,7 @@ import android.util.Patterns;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -28,6 +29,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     EditText userName, password;
     TextView register, forgotPassword;
     Button signIN;
+    CheckBox rememberMe;
 
     private FirebaseAuth mAuth;
 
@@ -51,27 +53,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
         forgotPassword = (TextView) findViewById(R.id.forgotPassword);
         forgotPassword.setOnClickListener((View.OnClickListener) this);
-
-
-//        register = findViewById(R.id.Register);
-//        register.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(Login.this, SignUP.class);
-//                startActivity(intent);
-//            }
-//        });
-//
-//        signIN = findViewById(R.id.SignIN);
-//        signIN.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(Login.this, MainActivity.class);
-//                startActivity(intent);
-//                finish();
-//            }
-//        });
-
 
         password = findViewById(R.id.password);
 
@@ -128,6 +109,10 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         if(UserName.isEmpty()){
             userName.setError("UserName is required!");
             userName.requestFocus();
+            if(Password.isEmpty()){
+                password.setError("Password is required!");
+                password.requestFocus();
+            }
             return;
         }
         if(!Patterns.EMAIL_ADDRESS.matcher(UserName).matches()){

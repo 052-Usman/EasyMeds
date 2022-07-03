@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Patterns;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,6 +25,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUP  extends AppCompatActivity implements View.OnClickListener {
 
+    boolean passwordVisible;
     ImageButton backPress;
     Button joinUS;
     TextView signIN;
@@ -55,29 +59,33 @@ public class SignUP  extends AppCompatActivity implements View.OnClickListener {
         joinUS.setOnClickListener((View.OnClickListener) this);
 
 
-//        backPress = findViewById(R.id.backPress);
-//        backPress.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                finish();
-//            }
-//        });
-//
-//        signIN = findViewById(R.id.signIN);
-//        signIN.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                finish();
-//            }
-//        });
-//
-//        joinUS = findViewById(R.id.joinUS);
-//        joinUS.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                finish();
-//            }
-//        });
+        password.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent event) {
+                final int Right = 2;
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (event.getRawX() >= password.getRight() - password.getCompoundDrawables()[Right].getBounds().width()) {
+                        int selection = password.getSelectionEnd();
+                        if (passwordVisible) {
+                            //set drawable image here
+                            password.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.visibility_off, 0);
+                            //for hide password
+                            password.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                            passwordVisible = false;
+                        } else {
+                            //set drawable image here
+                            password.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.visibility_on, 0);
+                            //for show password
+                            password.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                            passwordVisible = true;
+                        }
+                        password.setSelection(selection);
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
     }
 
     @Override
@@ -103,11 +111,32 @@ public class SignUP  extends AppCompatActivity implements View.OnClickListener {
         if(UserName.isEmpty()){
             userName.setError("User Name is required!");
             userName.requestFocus();
+
+            if(AccountName.isEmpty()){
+                accountName.setError("Email is required!");
+                accountName.requestFocus();
+            }
+            if(Password.isEmpty()){
+                password.setError("Password is required!");
+                password.requestFocus();
+            }
+            if(PhoneNumber.isEmpty()){
+                phoneNumber.setError("Phone Number is required!");
+                phoneNumber.requestFocus();
+            }
             return;
         }
         if(AccountName.isEmpty()){
             accountName.setError("Email is required!");
             accountName.requestFocus();
+            if(Password.isEmpty()){
+                password.setError("Password is required!");
+                password.requestFocus();
+            }
+            if(PhoneNumber.isEmpty()){
+                phoneNumber.setError("Phone Number is required!");
+                phoneNumber.requestFocus();
+            }
             return;
         }
         if(!Patterns.EMAIL_ADDRESS.matcher(AccountName).matches()){
@@ -118,6 +147,10 @@ public class SignUP  extends AppCompatActivity implements View.OnClickListener {
         if(Password.isEmpty()){
             password.setError("Password is required!");
             password.requestFocus();
+            if(PhoneNumber.isEmpty()){
+                phoneNumber.setError("Phone Number is required!");
+                phoneNumber.requestFocus();
+            }
             return;
         }
         if(PhoneNumber.isEmpty()){

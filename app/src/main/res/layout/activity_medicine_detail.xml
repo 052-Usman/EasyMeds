@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="6"
+    android:background="@color/white"
+    tools:context=".medicineDetail">
+
+    <RelativeLayout
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <ImageView
+            android:id="@+id/link"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/notfoundimg"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_weight="4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:weightSum="6"
+        android:background="@drawable/card_background_m">
+        <LinearLayout
+            android:id="@+id/lLID"
+            android:layout_weight="1.4"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_height="0dp">
+            <RelativeLayout
+                android:layout_weight="1.8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/brand_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Medicine Name"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/segoe_ui_bold"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/cName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_below="@+id/brand_name"
+                    android:text="by"
+                    android:textColor="#B3B3B3"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/company_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toRightOf="@+id/cName"
+                    android:layout_below="@+id/brand_name"
+                    android:text="Company Name"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/seg_ui_semibold"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/catName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/cName"
+                    android:text="Category/"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/segoe_ui_regular"
+                    android:textStyle="normal" />
+                <TextView
+                    android:id="@+id/drug_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toRightOf="@+id/catName"
+                    android:layout_below="@+id/company_name"
+                    android:text="Drug Category"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/segoe_ui_regular"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_weight="1.2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/generic_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Generic Name"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/segoe_ui_regular"
+                    android:textStyle="italic" />
+            </RelativeLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_weight="0.4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <RatingBar
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?android:attr/ratingBarStyleSmall"
+                android:stepSize="0.1"
+                android:isIndicator="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:numStars="5"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_weight="3.4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:animateLayoutChanges="true"-->
+<!--                android:id="@+id/cardContent"-->
+<!--                app:cardUseCompatPadding="true"-->
+<!--                app:cardElevation="4dp"-->
+<!--                app:cardCornerRadius="3dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/content1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:animateLayoutChanges="true"-->
+<!--                    android:padding="16dp"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Content"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="16dp"-->
+<!--                        android:textStyle="bold" />-->
+<!--&lt;!&ndash;                    <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:src="@drawable/arrow_down_icon"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_alignParentRight="true"/>&ndash;&gt;-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/content"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Content"-->
+<!--                        android:textSize="14dp"-->
+<!--                        android:textStyle="normal"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:visibility="gone"/>-->
+
+<!--                </LinearLayout>-->
+<!--            </androidx.cardview.widget.CardView>-->
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_weight="0.8"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <Button
+                android:id="@+id/addToCart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/back_color"
+                android:padding="15dp"
+                android:text="Add to Cart"
+                android:textColor="@color/white"
+                app:cornerRadius="15dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

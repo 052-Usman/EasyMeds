@@ -9,4 +9,6 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
+    <string name="pharma_store">PharmaStore</string>
+    <string name="medicine_detail"></string>
 </resources>

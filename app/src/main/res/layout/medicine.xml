@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:elevation="100dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/caution"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"/>
+
+            <ImageView
+                android:id="@+id/link"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/notfoundimg"
+                app:civ_border_color="@color/teal_700"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:id="@+id/brand_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/link"
+                android:layout_centerHorizontal="true"
+                android:text="Medicine Name"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/segoe_ui_bold"/>
+
+            <TextView
+                android:id="@+id/generic_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/brand_name"
+                android:layout_centerHorizontal="true"
+                android:text="Generic Name"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:textStyle="normal"
+                android:fontFamily="@font/seg_ui_semibold"/>
+
+<!--            <TextView-->
+<!--                android:id="@+id/company_name"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/brand_name"-->
+<!--                android:layout_marginLeft="12dp"-->
+<!--                android:layout_toRightOf="@id/link"-->
+<!--                android:text="Company Name"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="13dp"-->
+<!--                android:textStyle="italic" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/ctg"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/company_name"-->
+<!--                android:layout_marginLeft="12dp"-->
+<!--                android:layout_marginTop="3dp"-->
+<!--                android:layout_toRightOf="@id/link"-->
+<!--                android:text="Category/"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="12dp"-->
+<!--                android:textStyle="normal" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/drug_category"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/company_name"-->
+<!--                android:layout_marginLeft="2dp"-->
+<!--                android:layout_marginTop="3dp"-->
+<!--                android:layout_toRightOf="@id/ctg"-->
+<!--                android:text="Category"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="12dp"-->
+<!--                android:textStyle="normal" />-->
+
+            <TextView
+                android:id="@+id/Rs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/generic_name"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="45dp"
+                android:text="Rs. "
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/segoe_ui_bold"/>
+
+            <TextView
+                android:id="@+id/packs_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/generic_name"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@id/Rs"
+                android:text="Rs."
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:fontFamily="@font/segoe_ui_regular"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -7,6 +7,8 @@
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/drawable-v24/card_background.xml" value="0.18518518518518517" />
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/drawable-v24/edit_text_background.xml" value="0.18518518518518517" />
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/drawable/arrow_down_icon.xml" value="0.1712962962962963" />
+        <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/drawable/card_background_m.xml" value="0.1712962962962963" />
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/drawable/circle_shape.xml" value="0.17407407407407408" />
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/drawable/circle_shape_alternative.xml" value="0.17407407407407408" />
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/drawable/circle_shape_pharmacy.xml" value="0.22552083333333334" />
@@ -18,22 +20,32 @@
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/drawable/side_nav_bar.xml" value="0.1638888888888889" />
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/drawable/splash_background.xml" value="0.17777777777777778" />
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/drawable/visibility_on.xml" value="0.18518518518518517" />
+        <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/drawable/warning_icon.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/layout/activity_black_list.xml" value="0.1" />
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/layout/activity_drawer_menu.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/layout/activity_forgot_password.xml" value="0.1838768115942029" />
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/layout/activity_get_started_screen.xml" value="0.20425724637681159" />
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/layout/activity_login.xml" value="0.10182370820668693" />
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/layout/activity_main_drawer.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/layout/activity_medicine_detail.xml" value="0.17" />
+        <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/layout/activity_pharma_store.xml" value="0.33" />
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/layout/activity_sign_up.xml" value="0.18" />
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/layout/activity_splash_screen.xml" value="0.10182370820668693" />
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/layout/content_drawer_menu.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/layout/expand_card_items.xml" value="0.192481884057971" />
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/layout/fragment_gallery.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/layout/header_menu.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/layout/medicine.xml" value="0.2" />
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/layout/nav_header_drawer_menu.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/layout/nav_header_main.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/menu/activity_main_drawer.xml" value="0.209375" />
+        <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/menu/favouritebar.xml" value="0.16" />
+        <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/menu/favouritemenu.xml" value="0.18" />
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/menu/main.xml" value="0.209375" />
+        <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/menu/main_menu.xml" value="0.209375" />
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/menu/nav_header_main.xml" value="0.209375" />
+        <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/menu/searchmenu.xml" value="0.18" />
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/menu/sidemenu.xml" value="0.209375" />
         <entry key="..\:/Users/usman/AndroidStudioProjects/EasyMeds/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.11614583333333334" />
       </map>

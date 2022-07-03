@@ -23,4 +23,15 @@
     </style>
     <style name="Theme.EasyMeds.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="Theme.EasyMeds.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="Theme.PharmaStore" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/back_color</item>
+    </style>
+
+    <style name="Theme.medicineDetail" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/white</item>
+
+        <item name="android:textColor">@color/black</item>
+    </style>
 </resources>
