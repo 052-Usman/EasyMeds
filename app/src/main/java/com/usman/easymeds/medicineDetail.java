@@ -13,11 +13,14 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.util.TextUtils;
@@ -41,8 +44,11 @@ public class medicineDetail extends AppCompatActivity {
     TextView drug_category_set;
     ImageView link_set;
     RatingBar ratingBar_set;
-    Double packs_price_set;
+    TextView packs_price_set;
     TextView content_set;
+
+    EditText feedBack;
+    Button sendFeedBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -131,12 +137,14 @@ public class medicineDetail extends AppCompatActivity {
         link_set = (ImageView)findViewById(R.id.link);
         content_set = (TextView)findViewById(R.id.content);
         ratingBar_set = (RatingBar)findViewById(R.id.rating);
+        packs_price_set = findViewById(R.id.packs_price);
 
 //        //set with specific id
         brand_name_set.setText(brand_name);
         company_name_set.setText(company_name);
         generic_name_set.setText(generic_name);
         drug_category_set.setText(drug_category);
+        packs_price_set.setText(packs_price.substring(packs_price.lastIndexOf(':') + 1));
 
         ratingBar_set.setRating(rating.floatValue());
 //        content_set.setText(content);
@@ -145,6 +153,25 @@ public class medicineDetail extends AppCompatActivity {
         if(!TextUtils.isEmpty(str) && str.endsWith("png")) {
             Glide.with(link_set.getContext()).load(str).into(link_set);
         }
+        else{
+            Glide.with(link_set)
+                    .load(R.drawable.notfoundimg2)
+                    .into(link_set);
+        }
+
+        //user feedback handle
+        sendFeedBack = findViewById(R.id.sendFeedBack);
+        sendFeedBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                feedBack = findViewById(R.id.feedBack);
+
+            }
+        });
+
+
+
+
     }
 
     @Override

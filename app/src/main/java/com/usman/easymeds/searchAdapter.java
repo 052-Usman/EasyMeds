@@ -63,7 +63,7 @@ public class searchAdapter extends FirebaseRecyclerAdapter<modelSearch, searchAd
         }
         else{
             Glide.with(holder.link.getContext())
-                    .load(R.drawable.notfoundimg)
+                    .load(R.drawable.notfoundimg2)
                     .into(holder.link);
         }
 

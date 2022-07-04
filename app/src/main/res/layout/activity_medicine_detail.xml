@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -15,12 +18,13 @@
         android:layout_weight="2"
         android:layout_width="match_parent"
         android:layout_height="0dp">
+
         <ImageView
             android:id="@+id/link"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/notfoundimg"
-            android:layout_centerInParent="true"/>
+            android:layout_centerInParent="true"
+            android:src="@drawable/notfoundimg2" />
     </RelativeLayout>
     <LinearLayout
         android:layout_weight="4"
@@ -119,7 +123,7 @@
             </RelativeLayout>
         </LinearLayout>
         <RelativeLayout
-            android:layout_weight="0.4"
+            android:layout_weight="0.3"
             android:layout_width="match_parent"
             android:layout_height="0dp">
             <RatingBar
@@ -134,7 +138,7 @@
                 android:numStars="5"/>
         </RelativeLayout>
         <RelativeLayout
-            android:layout_weight="3.4"
+            android:layout_weight="2.2"
             android:layout_width="match_parent"
             android:layout_height="0dp">
 
@@ -194,6 +198,94 @@
         </RelativeLayout>
         <RelativeLayout
             android:layout_weight="0.8"
+            android:gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_marginRight="15dp"-->
+<!--                android:layout_marginLeft="15dp"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="#000001" />-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feedback"
+                android:textSize="16dp"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:layout_marginLeft="15dp"/>
+            <EditText
+                android:id="@+id/feedBack"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginRight="90dp"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/colorPlaceholder"
+                android:hint="Provide Feedback"
+                android:textSize="14dp"
+                android:longClickable="true"
+                android:layout_centerVertical="true"/>
+            <Button
+                android:id="@+id/sendFeedBack"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="3dp"
+                android:backgroundTint="@color/back_color"
+                android:textColor="@color/white"
+                android:text="Submit"
+                android:textSize="14dp"
+                app:cornerRadius="25dp"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_weight="0.5"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/pPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price : "
+                    android:textSize="18dp"
+                    android:fontFamily="@font/seg_ui_semibold"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"/>
+                <TextView
+                    android:id="@+id/packs_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/pPrice"
+                    android:text="Price"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/segoe_ui_regular"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="1dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/packs_price"
+                    android:text="Rs"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/seg_ui_semibold"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_weight="0.8"
             android:layout_width="match_parent"
             android:layout_height="0dp">
             <Button
@@ -210,4 +302,4 @@
     </LinearLayout>
 
 
-</LinearLayout>
+</LinearLayout></ScrollView>
